@@ -25,6 +25,14 @@ class Model{
      getById(id){
       return this.querys(`SELECT * FROM ${this.table} WHERE id = ${id}`);
      }
+
+     getWhere(value, condition){
+      return this.querys(`SELECT FROM ${this.table} WHERE ${value} = ${condition}`)
+     }
+
+     delete(id){
+      return this.querys(`DELETE FROM ${this.table} WHERE id = ${id}`);
+     }
 }
 
 module.exports = Model;
